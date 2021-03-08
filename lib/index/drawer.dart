@@ -1,5 +1,7 @@
 import 'package:capyba/paginas/Restricted.dart';
 import 'package:capyba/paginas/ValidarScreen.dart';
+
+
 import 'package:flutter/material.dart';
 
 class StyleDrawer extends StatelessWidget {
@@ -21,9 +23,7 @@ class StyleDrawer extends StatelessWidget {
                     margin: EdgeInsets.only(top: 30),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      image: DecorationImage(
-                          image: NetworkImage(
-                              'https://www.thesprucepets.com/thmb/COdGzNriu8oQVi8igXmSzFzXTRk=/2109x2109/smart/filters:no_upscale()/puppy-samoyed-boy-990077480-5c89719646e0fb00012c67e8.jpg')),
+                      image: DecorationImage(image: NetworkImage('')),
                     ),
                   ),
                   Text(
@@ -49,14 +49,13 @@ class StyleDrawer extends StatelessWidget {
               style: TextStyle(fontSize: 20),
             ),
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(
-                    builder: (context) => RestrictedScreen()
-                )
-              );
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => RestrictedScreen()));
             },
           ),
-           ListTile(
+          ListTile(
             leading: Icon(Icons.mail),
             title: Text(
               'Validar Email',
@@ -64,10 +63,7 @@ class StyleDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(
-                    builder: (context) => ValidarScreen()
-                )
-              );
+                  MaterialPageRoute(builder: (context) => ValidarScreen()));
             },
           ),
         ],
